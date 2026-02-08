@@ -4,6 +4,27 @@
 
 {% block body %}
 
-    
+<section id="landing_section">
+
+    <!-- Logo and title -->
+    <img src="{{ url_for('static', filename='markify.png') }}" class="landing_logo mt-4" alt="Markify Logo">
+    <h1 class="mt-2"><strong>Markify</strong></h1>
+    <h2 class="subtitle mt-2">Smart, secured, and fast attendance</h2>
+
+    <!-- Action buttons card -->
+    <div class="container mt-5">
+        <div class="card shadow-lg action-card">
+            <div class="card-header text-center">
+                <p class="mb-0 header-text">Give Markify a try</p>
+            </div>
+            <div class="card-body">
+                <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg mb-3 action-btn">Register your organization</a>
+                <a href="#" class="btn btn-success btn-lg mb-3 action-btn">Login your organization</a>
+                <a href="#" class="btn btn-warning btn-lg mb-3 action-btn">Login as moderator</a>
+            </div>
+        </div>
+    </div>
+
+</section>
 
 {% endblock %}

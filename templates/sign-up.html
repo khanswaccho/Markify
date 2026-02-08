@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MARKIFY - Register</title>
+
+    <link rel="shortcut icon" href="/static/assets/img/favicon.png" type="img/png" />
+    <link rel="stylesheet" href="/static/assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/static/assets/fonts/fontawesome/css/all.min.css" />
+    <link rel="stylesheet" href="/static/assets/css/style.css" />
+    <link rel="stylesheet" href="/static/assets/css/responsive.css" />
+
+    <style>
+        /* 1. Top Left Header Logo */
+        .brand-logo img {
+            max-width: 160px;
+            height: auto;
+        }
+
+        /* 2. MARKIFY Bold Title & Logo Row */
+        .markify-title-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 35px;
+        }
+
+        .markify-bold-text {
+            font-weight: 900 !important;
+            font-size: 38px;
+            letter-spacing: 1.5px;
+            color: #212529;
+            text-transform: uppercase;
+            margin: 0;
+        }
+
+        .form-logo-img {
+            max-width: 70px;
+            height: auto;
+        }
+
+        /* 3. Fixing the Mixed-up Dropdown */
+        .field-group {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .field-group select {
+            width: 100% !important;
+            height: 60px !important;
+            padding-left: 55px !important;
+            border: 1px solid #ebebeb !important;
+            border-radius: 8px !important;
+            background-color: #fff !important;
+            color: #6c757d !important;
+            appearance: auto !important; 
+            -webkit-appearance: listbox !important;
+            display: block !important;
+        }
+
+        .field-group input {
+            height: 60px !important;
+            padding-left: 55px !important;
+            border: 1px solid #ebebeb !important;
+            border-radius: 8px !important;
+        }
+
+        .field-group .icon {
+            position: absolute;
+            left: 22px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #444;
+            font-size: 18px;
+            z-index: 10;
+        }
+
+        /* 4. Footer & Form Wrapper */
+        .sign-in-up-wrapper {
+            box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+            border-radius: 20px;
+            padding: 45px;
+            background: #fff;
+        }
+
+        .template-footer {
+            padding: 40px 0;
+            background: #fdfdfd;
+            border-top: 1px solid #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="template-header">
+        <div class="container-fluid container-1430">
+            <div class="header-inner" style="padding: 15px 0;">
+                <div class="brand-logo">
+                    <a href="index.html">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="sign-in-section p-t-100 p-b-100">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-5 col-lg-6 col-md-8">
+                    <div class="sign-in-up-wrapper">
+                        
+                        <form action="/register" method="POST">
+                            <div class="form-groups">
+                                
+                                <div class="markify-title-row">
+                                    <img src="/static/assets/img/markify-1.png" alt="Logo" class="form-logo-img">
+                                    <h2 class="markify-bold-text">MARKIFY</h2>
+                                </div>
+                                
+                                <div class="field-group">
+                                    <div class="icon"><i class="far fa-building"></i></div>
+                                    <input type="text" name="org_name" placeholder="Organization Name" required>
+                                </div>
+
+                                <div class="field-group">
+                                    <div class="icon"><i class="far fa-envelope"></i></div>
+                                    <input type="email" name="user_email" placeholder="Mail" required>
+                                </div>
+
+                                <div class="field-group">
+                                    <div class="icon"><i class="far fa-list-alt"></i></div>
+                                    <select name="org_type" required>
+                                        <option value="" disabled selected>Select Organization Type</option>
+                                        <option value="university">University / School</option>
+                                        <option value="corporate">Corporate Office</option>
+                                        <option value="government">Government Body</option>
+                                    </select>
+                                </div>
+
+                                <div class="field-group">
+                                    <div class="icon"><i class="fas fa-lock"></i></div>
+                                    <input type="password" name="password" placeholder="Password" required>
+                                </div>
+
+                                <div class="field-group">
+                                    <div class="icon"><i class="fas fa-lock"></i></div>
+                                    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+                                </div>
+
+                                <div class="field-group m-t-40">
+                                    <button type="submit" class="main-btn btn-filled w-100" style="height: 60px; font-weight: 700; font-size: 18px; background-color: #4B39EF; color: white; border: none; border-radius: 8px;">Create Account</button>
+                                </div>
+                            </div>
+
+                            <div class="form-note text-center m-t-25">
+                                <p><a href="#" style="font-size: 13px; color: #999; text-decoration: none;">Forgot Password?</a></p>
+                                <p style="margin-top: 15px;">Already have an account? <a href="sign-in.html" style="color: #007bff; font-weight: 700;">Log In</a></p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="template-footer">
+        <div class="container text-center">
+            <p style="color: #777;">© 2026 <b>Markify</b>. All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="/static/assets/js/jquery-3.6.0.min.js"></script>
+    </body>
+</html>
